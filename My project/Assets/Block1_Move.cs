@@ -16,8 +16,22 @@ public class Block1_Move : MonoBehaviour
        
         if (Input.GetKey(KeyCode.UpArrow))
         { 
-            transform.position += Vector3.up * Time.fixedDeltaTime;
+            transform.position += Vector3.forward * Time.fixedDeltaTime;
         }
-        
+
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            transform.position += Vector3.left * Time.fixedDeltaTime;
+        }
+
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
+            transform.position += Vector3.right * Time.fixedDeltaTime;
+        }
+
+        if (Input.GetKey(KeyCode.DownArrow))
+        {
+            transform.position += Vector3.back * Time.fixedDeltaTime;
+        }
     }
 }
