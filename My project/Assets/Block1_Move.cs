@@ -33,5 +33,15 @@ public class Block1_Move : MonoBehaviour
         {
             transform.position += Vector3.back * Time.fixedDeltaTime;
         }
+
+        if (Input.GetKey(KeyCode.Q))
+        {
+            transform.position += Vector3.up * Time.fixedDeltaTime;
+        }
+
+        if (Input.GetKey(KeyCode.E))
+        {
+            transform.position += Vector3.down * Time.fixedDeltaTime;
+        }
     }
 }
