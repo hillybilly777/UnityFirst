@@ -15,11 +15,18 @@ public class ApplyForceToCube : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            ourRigidBody.AddExplosionForce(200, transform.position - new Vector3(0, -1, -1), 3);
+            ourRigidBody.AddExplosionForce(1000, transform.position - new Vector3(0, -1, -1), 3);    
 
         }
 
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        print("Ouch");
+        collision.transform.position += Vector3.back;
+    }
+
 }
